@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulário</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        font-family: Arial;
+      }
+    </style>
+    <script type="text/javascript">
+      function validaform() {
+        var nome = document.getElementById("nomeid");
+        if (nome.value == "") {
+          alert("Por favor, indique o seu nome.");
+          nome.focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <form
+      action="recebedados_vazio.html"
+      method="get"
+      onsubmit="return validaform()"
+      ;
+    >
+      <label for="nomeid">Nome:</label>
+      <input
+        id="nomeid"
+        type="text"
+        placeholder="Digite seu nome"
+        name="nome"
+      />
+      <br /><br />
+
+      <label>Você recomendaria este site?</label>
+      <br />
+
+      <input id="sim" type="radio" name="opção" value="sim" checked="checked" />
+      <label for="sim">Sim</label><br />
+      <input id="não" type="radio" name="opção" value="não" />
+      <label for="não">Não</label>
+      <br /><br />
+
+      <label>Quais são as linguagens de seu interesse ?></label>
+      <br />
+
+      <input id="ling1" type="checkbox" name="html" />
+      <label for="ling1">HTML</label>
+      <br />
+
+      <input id="ling2" type="checkbox" name="css" />
+      <label for="ling2">CSS</label>
+      <br />
+
+      <input id="ling3" type="checkbox" name="javascript" />
+      <label for="ling3">JavaScript</label>
+      <br /><br />
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

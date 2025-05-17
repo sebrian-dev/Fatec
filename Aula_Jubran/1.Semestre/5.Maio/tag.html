@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <style>
+      .img {
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Usar Vh para ocupar toda a altura da tela */
+        width: 100vw; /* Usar Vw para ocupar toda a largura da tela */
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Garante que a imagem de fundo fique atrás do conteúdo */
+      }
+      body {
+        margin: 0; /* Remover margem padrão do body */
+        font-family: sans-serif;
+        color: white; /* Melhor leitura do texto sobre as imagens */
+        background-color: rgba(0, 0, 0, 5); /* Adicionar camada escura */
+      }
+      .container {
+        position: relative;
+        z-index: 1; /* Garantir que o conteúdo fique acima da imagem */
+        padding: 20px;
+        text-align: center;
+      }
+      select {
+        padding: 8px;
+        font-size: 16px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img" id="bg-image"></div>
+
+    <div class="container">
+      <h2>Exemplo de Tag de seleção com Imagens Dinâmicas</h2>
+      <form>
+        <label for="city-select">Escolha sua cidade Favorita na Índia:</label>
+        <select id="city-select" onchange="changeBackground()">
+          <option value="new-delhi">New Delhi</option>
+          <option value="indore">Indore</option>
+          <option value="jaipur">Jaipur</option>
+          <option value="jodhpur">Joadhpur</option>
+          <option value="chandigarh">Chandigarh</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="bengaluru">Bengaluru</option>
+          <option value="lucknow">Lucknow</option>
+          <option value="amritsar">Amritsar</option>
+        </select>
+      </form>
+    </div>
+    <script>
+      function changeBackground() {
+        var selectBox = document.getElementById("city-select");
+        var selectedValue = selectBox.value;
+        var backgroundImageDiv = document.getElementById("bg-image");
+
+        switch (selectedValue) {
+          case "new-delhi":
+            backgroundImageDiv.style.backgroundImage = "url('new-delhi.jpg')";
+            break;
+          case "indore":
+            backgroundImageDiv.style.backgroundImage = "url('indore.jpg')";
+            break;
+          case "jaipur":
+            backgroundImageDiv.style.backgroundImage = "url('jaipur.jpg')";
+            break;
+          case "jodhpur":
+            backgroundImageDiv.style.backgroundImage = "url('jodhpur.jpg')";
+            break;
+          case "chandigarh":
+            backgroundImageDiv.style.backgroundImage = "url('chandigarh.jpg')";
+            break;
+          case "mumbai":
+            backgroundImageDiv.style.backgroundImage = "url('mumbai.jpg')";
+            break;
+          case "bengaluru":
+            backgroundImageDiv.style.backgroundImage = "url('bengaluru.jpg')";
+            break;
+          case "lucknow":
+            backgroundImageDiv.style.backgroundImage = "url('lucknow.jpg')";
+            break;
+          case "amritsar":
+            backgroundImageDiv.style.backgroundImage = "url('amritsar.jpg')";
+            break;
+          default:
+            backgroundImageDiv.style.backgroundImage = "url ('india.jpg')";
+        }
+      }
+      // Define a imagem  inicial ao carregar a página (opcional)
+      window.onload = function () {
+        changeBackground(); // Chama a função para definir a imagem inicial
+      };
+    </script>
+  </body>
+</html>
