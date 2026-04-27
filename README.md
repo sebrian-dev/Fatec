@@ -15,7 +15,13 @@ FATEC/
 │
 ├── 🟦 Aula_Estrutura de Dados/          # Disciplina: Estrutura de Dados (Java)
 │   │
-│   ├── pilha/                           # Implementação de Pilha (LIFO)
+│   ├── lista_ligada/                    # 🔗 Implementação de Lista Ligada
+│   │   ├── Lista.java                   # Implementação da Lista Ligada
+│   │   ├── No.java                      # Classe Nó (elemento da lista)
+│   │   ├── TesteLista.java              # Testes da Lista Ligada
+│   │   └── TesteNo.java                 # Testes da classe Nó
+│   │
+│   ├── pilha/                           # 📚 Implementação de Pilha (LIFO)
 │   │   ├── Carta.java                   # Classe Carta para o baralho
 │   │   ├── Pilha.java                   # Implementação genérica da Pilha
 │   │   ├── PilhaCartas.java             # Pilha especializada para Cartas
@@ -24,7 +30,7 @@ FATEC/
 │   │   ├── TestePilha.java              # Testes da Pilha genérica
 │   │   └── TestePilhaCartas.java        # Testes da Pilha de Cartas
 │   │
-│   └── vetor/                           # Implementação de Vetor/Array
+│   └── vetor/                           # 📦 Implementação de Vetor/Array
 │       ├── ComparaBubbleQuick.java      # Comparação Bubble Sort vs Quick Sort
 │       ├── NossoVetor.java              # Implementação de vetor dinâmico
 │       ├── OutroTeste.java              # Testes adicionais
